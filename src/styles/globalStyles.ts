@@ -17,6 +17,14 @@ const theme = createGlobalStyle`
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    --aqua: #12B8FF;
+    --bgAqua: #12B8FF;
+    --bgColor: #E5E5E5;
+    --black: #3C4858;
+    --darkGrey: #8492A6;
+    --disabledGrey: #DADEE4;
+    --lightBgColor: #F0F2F4;
+    --white: #FFFFFF;
   }
 `
 
