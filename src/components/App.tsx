@@ -1,7 +1,10 @@
+import styled from 'styled-components'
+
+const Heading = styled.h1`
+  font-size: 3em;
+  color: blue;
+`
+
 export default function App() {
-  return (
-    <div className="App">
-      <h1>Hello Kuehne + Nagel</h1>
-    </div>
-  );
+  return <Heading>Hello World</Heading>
 }
