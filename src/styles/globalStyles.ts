@@ -17,9 +17,10 @@ const theme = createGlobalStyle`
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--bgColor);
     --aqua: #12B8FF;
     --bgAqua: #12B8FF;
-    --bgColor: #E5E5E5;
+    --bgColor: #F5F6FA;
     --black: #3C4858;
     --darkGrey: #8492A6;
     --disabledGrey: #DADEE4;
