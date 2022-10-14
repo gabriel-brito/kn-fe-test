@@ -1,9 +1,10 @@
 import Layout from 'components/Layout'
+import Information from 'components/Information'
 
 export default function App() {
   return (
     <Layout>
-      <h1>Hello world</h1>
+      <Information />
     </Layout>
   )
 }
