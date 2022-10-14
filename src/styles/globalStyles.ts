@@ -18,6 +18,7 @@ const theme = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--bgColor);
+    color: var(--black);
     --aqua: #12B8FF;
     --bgAqua: #12B8FF;
     --bgColor: #F5F6FA;
