@@ -1,5 +1,5 @@
 export const categories = [
-  'Software development',
+  'Software Development',
   'Daily Business',
   'Graphic Editors',
   'Text Editors',

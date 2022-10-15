@@ -12,14 +12,21 @@ export const Wrapper = styled.div`
   padding: 14px 24px;
   width: 100%;
 
-  @media (max-width: 800px) {
+  @media (max-width: 890px) {
     align-items: flex-start;
     flex-direction: column-reverse;
     justify-content: flex-start;
   }
 `
 
-export const InfoWrapper = styled.div``
+export const InfoWrapper = styled.div`
+  max-width: 80%;
+  width: 100%;
+
+  @media (max-width: 890px) {
+    max-width: 100%;
+  }
+`
 
 export const Title = styled.h2`
   font-size: 16px;
@@ -28,14 +35,7 @@ export const Title = styled.h2`
 `
 
 export const TagsWrapper = styled.div`
-  align-items: center;
-  display: flex;
-  grid-gap: 10px;
   width: 100%;
-
-  @media (max-width: 800px) {
-    display: block;
-  }
 `
 
 export const Tag = styled.span`
@@ -45,10 +45,7 @@ export const Tag = styled.span`
   display: inline-block;
   font-weight: 500;
   padding: 6px 9px;
-
-  @media (max-width: 800px) {
-    margin: 0 10px 10px 0;
-  }
+  margin: 0 10px 10px 0;
 `
 
 export const Category = styled.h3`
@@ -56,7 +53,7 @@ export const Category = styled.h3`
   font-size: 16px;
   font-weight: 400;
 
-  @media (max-width: 800px) {
+  @media (max-width: 890px) {
     margin-bottom: 10px;
   }
 `

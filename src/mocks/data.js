@@ -78,7 +78,7 @@ export const data = [
   {
     productName: 'ZeroTurnaround JRebel',
     tags: ['Java', 'Deployment', 'Zeroturnaround', 'Xrebel'],
-    category: 'Developer',
+    category: 'Software Development',
     manufacturerUrl: 'https://www.jrebel.com/products/jrebel',
     description: [
       'JRebel is a productivity tool that allows developers to reload code changes instantly. It skips the rebuild, restart and redeploy cycle common in Java development. JRebel enables developers to get more done in the same amount of time and to stay in the flow while coding.'
@@ -89,7 +89,7 @@ export const data = [
   {
     productName: 'JetBrains PhpStorm 2020',
     tags: ['JetBrains', 'PhpStorm', 'Code', 'Database', 'Coding', 'Renewal'],
-    category: 'Developer',
+    category: 'Software Development',
     manufacturerUrl: 'https://www.jetbrains.com/phpstorm',
     description: [
       "The editor actually 'gets' your code and deeply understands its structure, supporting all the PHP language features for modern and legacy projects. It provides the best code completion, refactoring, on-the-fly error prevention, and more."
@@ -108,7 +108,7 @@ export const data = [
       'Code',
       'Coding'
     ],
-    category: 'Developer',
+    category: 'Software Development',
     manufacturerUrl: 'https://www.jetbrains.com/resharper',
     description: [
       'The Visual Studio Extension for .NET Developers.',
@@ -129,7 +129,7 @@ export const data = [
       'Business Intelligence',
       'Analytics'
     ],
-    category: 'Data Analytics',
+    category: 'Graphic Editors',
     manufacturerUrl: 'https://www.tableau.com/products/desktop',
     description: [
       'Tableau is a powerful and fastest growing data visualization tool used in the Business Intelligence Industry. It helps in simplifying raw data into the very easily understandable format. Data analysis is very fast with Tableau and the visualizations created are in the form of dashboards and worksheets.'
@@ -140,7 +140,7 @@ export const data = [
   {
     productName: 'Zoom Meetingroom',
     tags: ['Zoom', 'Meetingrooms', 'Zoomrooms', 'Sharing content'],
-    category: 'Daily Business',
+    category: 'Graphic Editors',
     manufacturerUrl: 'https://zoom.us/zoomrooms',
     description: [
       'Zoom Rooms tackles the three biggest pain points of the conference room: Starting a meeting, booking a meeting, and sharing content.'
