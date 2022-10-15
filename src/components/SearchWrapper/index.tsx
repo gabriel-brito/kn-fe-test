@@ -1,16 +1,16 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 
 import SearchFields from 'components/SearchFields'
 import ProductData from 'components/ProductData'
 
+import { filterByCategory, filterByTerm } from 'utils/filter'
 import { data } from 'mocks/data'
 
 export default function SearchWrapper() {
   const [selectedCategory, setSelectedCategory] = useState('')
+  const [term, setSearchTerm] = useState('')
 
   const handleCategory = (category: string) => {
-    console.log(category)
-
     if (category === selectedCategory) {
       setSelectedCategory('')
 
@@ -21,12 +21,34 @@ export default function SearchWrapper() {
   }
 
   const handleInput = (searchTerm: string) => {
-    if (!searchTerm) return
+    if (!searchTerm) {
+      setSearchTerm('')
+
+      return
+    }
 
     const value = searchTerm.trim()
 
-    console.log(value)
+    setSearchTerm(value)
   }
+
+  const filteredProducts = useMemo(() => {
+    if (selectedCategory && !term) {
+      return filterByCategory(data, selectedCategory)
+    }
+
+    if (!selectedCategory && term) {
+      return filterByTerm(data, term)
+    }
+
+    if (selectedCategory && term) {
+      const filteredByCategory = filterByCategory(data, selectedCategory)
+
+      return filterByTerm(filteredByCategory, term)
+    }
+
+    return []
+  }, [selectedCategory, term])
 
   return (
     <>
@@ -36,9 +58,14 @@ export default function SearchWrapper() {
         handleInput={handleInput}
       />
 
-      {data.map((product, index) => (
-        <ProductData key={`product-${index}`} handler={() => {}} {...product} />
-      ))}
+      {filteredProducts.length > 0 &&
+        filteredProducts.map((product: any, index: number) => (
+          <ProductData
+            key={`product-${index}`}
+            handler={() => {}}
+            {...product}
+          />
+        ))}
     </>
   )
 }
