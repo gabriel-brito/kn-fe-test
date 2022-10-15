@@ -22,6 +22,8 @@ const theme = createGlobalStyle`
     --aqua: #12B8FF;
     --bgAqua: #12B8FF;
     --bgColor: #F5F6FA;
+    --inputBg: #F0F2F4;
+    --borderColor: #EBEBEB;
     --black: #3C4858;
     --darkGrey: #8492A6;
     --disabledGrey: #DADEE4;
