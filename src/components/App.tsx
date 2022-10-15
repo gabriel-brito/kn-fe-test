@@ -4,6 +4,7 @@ import Layout from 'components/Layout'
 import Information from 'components/Information'
 import Tabs from 'components/Tabs'
 import SearchFields from 'components/SearchFields'
+import ProductData from 'components/ProductData'
 
 export default function App() {
   const [actualStep, setActualStep] = useState(1)
@@ -44,6 +45,7 @@ export default function App() {
         selectedCategory={selectedCategory}
         handleInput={handleInput}
       />
+      <ProductData />
     </Layout>
   )
 }

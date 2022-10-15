@@ -20,7 +20,7 @@ const theme = createGlobalStyle`
     background-color: var(--bgColor);
     color: var(--black);
     --aqua: #12B8FF;
-    --bgAqua: #12B8FF;
+    --bgAqua: #def5ff;
     --bgColor: #F5F6FA;
     --inputBg: #F0F2F4;
     --borderColor: #EBEBEB;
