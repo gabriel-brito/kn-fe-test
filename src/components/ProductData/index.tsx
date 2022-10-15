@@ -1,26 +1,33 @@
 import * as S from './styles'
 
-const mock = {
-  productName: 'Foxit software PhantomPDF Standard',
-  tags: ['PDF', 'Change', 'Create', 'Maintenance', 'Business', 'FoxIT'],
-  category: 'Daily Business'
+type ProductDataTypes = {
+  category: string
+  handler: () => void
+  productName: string
+  tags: string[] | []
 }
 
-export default function ProductData() {
+export default function ProductData({
+  category,
+  handler,
+  productName,
+  tags
+}: ProductDataTypes) {
   return (
-    <S.Wrapper>
+    <S.Wrapper data-testid="product-data" onClick={handler}>
       <S.InfoWrapper>
-        <S.Title>{mock.productName}</S.Title>
+        <S.Title>{productName}</S.Title>
         <S.TagsWrapper>
-          {mock.tags.map((tag) => (
-            <S.Tag key={`tag-${tag}`} data-testid={tag}>
-              {tag}
-            </S.Tag>
-          ))}
+          {tags.length > 0 &&
+            tags.map((tag) => (
+              <S.Tag key={`tag-${tag}`} data-testid={tag}>
+                {tag}
+              </S.Tag>
+            ))}
         </S.TagsWrapper>
       </S.InfoWrapper>
 
-      <S.Category>{mock.category}</S.Category>
+      <S.Category>{category}</S.Category>
     </S.Wrapper>
   )
 }
