@@ -9,9 +9,9 @@ export const Wrapper = styled.section`
 `
 
 export const Title = styled.h2`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
-  padding: 12px 24px;
+  padding: 16px 24px;
 `
 
 export const SearchWrapper = styled.div`
