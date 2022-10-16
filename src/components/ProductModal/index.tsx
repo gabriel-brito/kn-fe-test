@@ -50,7 +50,7 @@ export default function ProductModal({
             Go to Manufacturer
           </S.ManufacturerLink>
 
-          <S.ProductDescription>
+          <S.ProductDescription data-testid="description">
             {String(productData.description.join('\n'))}
           </S.ProductDescription>
 
