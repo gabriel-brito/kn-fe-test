@@ -54,8 +54,8 @@ export default function ProductModal({
               ))}
           </S.TagsWrapper>
 
-          <S.ManufacturerLink href={mock.manufacturerUrl}>
-            Go to Manufacutrer
+          <S.ManufacturerLink href={mock.manufacturerUrl} target="_blank">
+            Go to Manufacturer
           </S.ManufacturerLink>
 
           <S.ProductDescription>{mock.description}</S.ProductDescription>
