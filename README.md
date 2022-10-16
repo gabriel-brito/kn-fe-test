@@ -24,6 +24,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - I've made a few changes to the provided mock. There were some unmatched information with the provided Figma design.
 - I didn't understood the options on "Product Details". What is does?
 - The options on the mock are not a list. The option, when selected,  needed to be black. So I stylized on the component itself, not with styles components.
+- This is a small project, so a state library (Redux, mobX) is not needed.
 
 ## Available Scripts
 
