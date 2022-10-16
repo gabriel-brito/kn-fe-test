@@ -50,7 +50,9 @@ export default function ProductModal({
             Go to Manufacturer
           </S.ManufacturerLink>
 
-          <S.ProductDescription>{productData.description}</S.ProductDescription>
+          <S.ProductDescription>
+            {String(productData.description.join('\n'))}
+          </S.ProductDescription>
 
           {productData.option1 && productData.option2 && (
             <>
