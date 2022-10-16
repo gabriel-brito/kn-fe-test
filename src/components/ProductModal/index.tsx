@@ -10,19 +10,6 @@ type ProductModalTypes = {
   showModal: boolean
 }
 
-const mock = {
-  productName: 'Foxit software PhantomPDF Standard',
-  tags: ['PDF', 'Change', 'Create', 'Maintenance', 'Business', 'FoxIT'],
-  category: 'Daily Business',
-  manufacturerUrl: 'https://www.foxitsoftware.com/de/pdf-editor',
-  description: [
-    'PhantomPDF provides powerful PDF Editor capabilities to allow authors to update their documents themselves.',
-    'Standard - Simple interface and limited functionality.'
-  ],
-  option1: '1 Year Maintenance',
-  option2: 'Without Maintenance'
-}
-
 export default function ProductModal({
   productData,
   showModal,
@@ -45,24 +32,27 @@ export default function ProductModal({
         </S.Header>
 
         <S.Content>
-          <S.ProductTitle>{mock.productName}</S.ProductTitle>
+          <S.ProductTitle>{productData.productName}</S.ProductTitle>
 
           <S.TagsWrapper>
-            {mock.tags.length > 0 &&
-              mock.tags.map((tag) => (
+            {productData.tags.length > 0 &&
+              productData.tags.map((tag: any) => (
                 <S.Tag key={`tag-${tag}`} data-testid={tag}>
                   {tag}
                 </S.Tag>
               ))}
           </S.TagsWrapper>
 
-          <S.ManufacturerLink href={mock.manufacturerUrl} target="_blank">
+          <S.ManufacturerLink
+            href={productData.manufacturerUrl}
+            target="_blank"
+          >
             Go to Manufacturer
           </S.ManufacturerLink>
 
-          <S.ProductDescription>{mock.description}</S.ProductDescription>
+          <S.ProductDescription>{productData.description}</S.ProductDescription>
 
-          {mock.option1 && mock.option2 && (
+          {productData.option1 && productData.option2 && (
             <>
               <S.OptionLabel>
                 <S.RadioWrapper
@@ -82,7 +72,7 @@ export default function ProductModal({
                   Option 1
                 </S.RadioWrapper>
 
-                <S.OptionDescription>{mock.option1}</S.OptionDescription>
+                <S.OptionDescription>{productData.option1}</S.OptionDescription>
               </S.OptionLabel>
 
               <S.OptionLabel>
@@ -103,7 +93,7 @@ export default function ProductModal({
                   Option 2
                 </S.RadioWrapper>
 
-                <S.OptionDescription>{mock.option2}</S.OptionDescription>
+                <S.OptionDescription>{productData.option2}</S.OptionDescription>
               </S.OptionLabel>
             </>
           )}

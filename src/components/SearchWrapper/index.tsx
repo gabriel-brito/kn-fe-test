@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, lazy } from 'react'
 
 import SearchFields from 'components/SearchFields'
 import ProductData from 'components/ProductData'
@@ -8,9 +8,13 @@ import { data } from 'mocks/data'
 
 import * as S from './styles'
 
+const ProductModal = lazy(() => import('components/ProductModal'))
+
 export default function SearchWrapper() {
   const [selectedCategory, setSelectedCategory] = useState('')
   const [term, setSearchTerm] = useState('')
+  const [selectedProduct, setSelectedProduct] = useState()
+  const [showModal, setShowModal] = useState(false)
 
   const handleCategory = (category: string) => {
     if (category === selectedCategory) {
@@ -32,6 +36,11 @@ export default function SearchWrapper() {
     const value = searchTerm.trim()
 
     setSearchTerm(value)
+  }
+
+  const handleOpenModal = (product: any) => {
+    setSelectedProduct(product)
+    setShowModal(true)
   }
 
   const filteredProducts = useMemo(() => {
@@ -64,10 +73,19 @@ export default function SearchWrapper() {
         {filteredProducts.length > 0 &&
           filteredProducts.map((product: any, index: number) => (
             <S.ListItem key={`product-${index}`}>
-              <ProductData handler={() => {}} {...product} />
+              <ProductData
+                handler={() => handleOpenModal(product)}
+                {...product}
+              />
             </S.ListItem>
           ))}
       </S.List>
+
+      <ProductModal
+        showModal={showModal}
+        productData={selectedProduct}
+        closeModal={setShowModal}
+      />
     </>
   )
 }
