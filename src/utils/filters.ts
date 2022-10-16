@@ -1,5 +1,10 @@
-export const filterByCategory = (data: any[], category: string) => {
-  const result: any = []
+import { ProductDataTypes } from 'types/data'
+
+export const filterByCategory = (
+  data: ProductDataTypes[] | [],
+  category: string
+) => {
+  const result: ProductDataTypes[] = []
 
   for (let i = 0; i < data.length; i++) {
     if (data[i].category === category) {
@@ -10,8 +15,8 @@ export const filterByCategory = (data: any[], category: string) => {
   return result
 }
 
-export const filterByTerm = (data: any[], term: string) => {
-  const result: any = []
+export const filterByTerm = (data: ProductDataTypes[] | [], term: string) => {
+  const result: ProductDataTypes[] = []
 
   for (let i = 0; i < data.length; i++) {
     if (data[i].productName.toLowerCase().includes(term.toLocaleLowerCase())) {

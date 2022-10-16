@@ -2,10 +2,12 @@ import { useState } from 'react'
 import { AiOutlineClose as CloseIcon } from 'react-icons/ai'
 
 import Backdrop from 'components/Backdrop'
+import { ProductDataTypes } from 'types/data'
+
 import * as S from './styles'
 
 type ProductModalTypes = {
-  productData: any
+  productData: ProductDataTypes | any
   closeModal: (state: boolean) => void
   showModal: boolean
 }
