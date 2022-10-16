@@ -1,4 +1,4 @@
-import { filterByCategory, filterByTerm } from 'utils/filter'
+import { filterByCategory, filterByTerm } from 'utils/filters'
 import { data } from 'mocks/data'
 
 describe('filterByCategory', () => {

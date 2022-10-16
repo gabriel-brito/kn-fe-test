@@ -3,7 +3,7 @@ import { useState, useMemo, lazy } from 'react'
 import SearchFields from 'components/SearchFields'
 import ProductData from 'components/ProductData'
 
-import { filterByCategory, filterByTerm } from 'utils/filter'
+import { filterByCategory, filterByTerm } from 'utils/filters'
 import { data } from 'mocks/data'
 
 import * as S from './styles'
