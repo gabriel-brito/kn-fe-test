@@ -76,4 +76,25 @@ export const ManufacturerLink = styled.a`
 
 export const ProductDescription = styled.p`
   line-height: 24px;
+  margin-bottom: 20px;
+`
+
+export const OptionLabel = styled.label`
+  cursor: pointer;
+  display: block;
+  margin-bottom: 20px;
+`
+
+export const RadioWrapper = styled.div`
+  align-items: center;
+  color: var(--black);
+  display: flex;
+`
+
+export const Radio = styled.input`
+  margin-right: 10px;
+`
+
+export const OptionDescription = styled.p`
+  line-height: 24px;
 `

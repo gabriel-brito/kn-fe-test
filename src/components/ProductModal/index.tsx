@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { AiOutlineClose as CloseIcon } from 'react-icons/ai'
 
 import Backdrop from 'components/Backdrop'
@@ -27,6 +28,7 @@ export default function ProductModal({
   showModal,
   closeModal
 }: ProductModalTypes) {
+  const [selectedOpt, setSelectedOpt] = useState('opt1')
   const handleCloseModal = () => closeModal(false)
 
   return showModal ? (
@@ -59,6 +61,52 @@ export default function ProductModal({
           </S.ManufacturerLink>
 
           <S.ProductDescription>{mock.description}</S.ProductDescription>
+
+          {mock.option1 && mock.option2 && (
+            <>
+              <S.OptionLabel>
+                <S.RadioWrapper
+                  style={{
+                    color:
+                      selectedOpt === 'opt1'
+                        ? 'var(--black)'
+                        : 'var(--darkGrey)'
+                  }}
+                >
+                  <S.Radio
+                    checked={selectedOpt === 'opt1'}
+                    onChange={() => setSelectedOpt('opt1')}
+                    type="radio"
+                    value="opt1"
+                  />
+                  Option 1
+                </S.RadioWrapper>
+
+                <S.OptionDescription>{mock.option1}</S.OptionDescription>
+              </S.OptionLabel>
+
+              <S.OptionLabel>
+                <S.RadioWrapper
+                  style={{
+                    color:
+                      selectedOpt === 'opt2'
+                        ? 'var(--black)'
+                        : 'var(--darkGrey)'
+                  }}
+                >
+                  <S.Radio
+                    checked={selectedOpt === 'opt2'}
+                    onChange={() => setSelectedOpt('opt2')}
+                    type="radio"
+                    value="opt2"
+                  />
+                  Option 2
+                </S.RadioWrapper>
+
+                <S.OptionDescription>{mock.option2}</S.OptionDescription>
+              </S.OptionLabel>
+            </>
+          )}
         </S.Content>
       </S.Modal>
     </Backdrop>
