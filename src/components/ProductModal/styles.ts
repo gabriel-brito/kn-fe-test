@@ -39,7 +39,6 @@ export const CloseButton = styled.button`
 
 export const Content = styled.div`
   padding: 20px 24px;
-  overflow-y: scroll;
 `
 
 export const ProductTitle = styled.h2`
